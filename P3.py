@@ -1,7 +1,5 @@
-#Simulates 2000 games and puts it into a JSON file: monty_hall_results.json
 
 import random
-import json
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -88,15 +86,7 @@ def simulate_games():
 
 simulate_games()
 
-# and not this? data =  {"wins_stay":stay_wins,
-         #"loss_stay": stay_losses,
-         #"win_change": change_wins,
-         #"loss_change": change_losses}
-
 df = pd.DataFrame(results)
-
-df.to_json("monty_hall_results.json", orient="records") #Not clear to me why I qm
-#df = pd.read_json("monty_hall_results.json")
 
 df = pd.read_json("monty_hall_results.json")
 
